@@ -8,6 +8,7 @@ const ContactMe = () => {
                 <form action="/action_page.php">
                     <label>First Name</label>
                     <input type="text" id="fname" name="firstname" placeholder="Your name.." />
+
                     <label>Last Name</label>
                     <input type="text" id="lname" name="lastname" placeholder="Your last name.." />
 
@@ -17,8 +18,13 @@ const ContactMe = () => {
 
 
                     <label>Subject</label>
-                    <textarea id="subject" name="subject" placeholder="Write something.."></textarea>
+                    <textarea id="subject" name="subject" placeholder="Subject"></textarea>
+
+
+                    <label>Message</label>
+                    <textarea id="text" name="text" placeholder="Write something..."></textarea>
                     <input type="submit" value="Submit" />
+
                 </form>
             </div>
         </div>
