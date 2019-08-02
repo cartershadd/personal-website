@@ -4,10 +4,10 @@ import spoon from '../../drawings/spoon.PDF';
 
 const WoodenSpoon = () => {
     return (
-        <div className="all-center">
+        <div className="detail-page">
             <img src={woodenSpoon} alt="spoon" className="popup-image"/>
-            <a href={spoon} className="large text-success">Wooden Spoon Drawing PDF</a>
-            <p>
+            <a href={spoon} className="pdf-link">Wooden Spoon Drawing PDF</a>
+            <p className="detail-about">
                 Just a spoon I made for fun!
             </p>
         </div>

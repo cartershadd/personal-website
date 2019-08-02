@@ -4,10 +4,10 @@ import sheetMetalLofted from '../../drawings/sheetMetalLofted.PDF';
 
 const LoftedSheet = () => {
     return (
-        <div className="all-center">
+        <div className="detail-page">
             <img src={sheetmetalLofted} alt="lofted" className="popup-image"/>
-            <a href={sheetMetalLofted} className="large text-success">Lofted Sheet Metal Drawing PDF</a>
-            <p>
+            <a href={sheetMetalLofted} className="pdf-link">Lofted Sheet Metal Drawing PDF</a>
+            <p className="detail-about">
                 This was a part I made to practice working with the Lofted function in Solidworks.
             </p>
         </div>

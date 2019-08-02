@@ -4,10 +4,10 @@ import TestObject1 from '../../drawings/TestObject1.PDF';
 
 const TestObject = () => {
     return (
-        <div className="all-center">
+        <div className="detail-page">
             <img src={testObject} alt="object" className="popup-image"/>
-            <a href={TestObject1} className="large text-success">Test Object</a>
-            <p>
+            <a href={TestObject1} className="pdf-link">Test Object</a>
+            <p className="detail-about">
                 This is another shape from the Solidworks certification test prep.
             </p>
         </div>

@@ -5,10 +5,11 @@ import Home from './components/pages/Home';
 import About from './components/pages/About';
 import ContactMe from './components/contact/ContactMe';
 import Projects from './components/pages/Projects';
-import Smile from './components/pages/Smile';
-import CrazyLines from './components/pages/CrazyLines';
-import CurvedLines from './components/pages/CurvedLines';
+import ArtGallery from './components/layout/ArtGallery';
 import './App.css';
+import CrazyLines from "./components/pages/CrazyLines";
+import CurvedLines from "./components/pages/CurvedLines";
+import Smile from "./components/pages/Smile";
 
 const App = () => {
     return (
@@ -19,10 +20,11 @@ const App = () => {
                     <Switch>
                         <Route exact path={'/'} component={Home}/>
                         <Route exact path={'/about'} component={About}/>
-                        <Route path={'/projects'} component={Projects}/>
-                        <Route path={'/smile'} component={Smile}/>
-                        <Route path={'/lines'} component={CrazyLines}/>
-                        <Route path={'/curved'} component={CurvedLines}/>
+                        <Route exact path={'/projects'} component={Projects}/>
+                        <Route exact path={'/artgallery'} component={ArtGallery}/>
+                        <Route exact path={'/artgallery/smile'} component={Smile}/>
+                        <Route exact path={'/artgallery/curvedlines'} component={CurvedLines}/>
+                        <Route exact path={'/artgallery/crazylines'} component={CrazyLines}/>
                         <Route exact path={'/contact'} component={ContactMe}/>
                     </Switch>
                 </div>

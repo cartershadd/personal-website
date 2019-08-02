@@ -56,13 +56,6 @@ img {
     height: 100%;
 }
 
-.popup-image {
-    width: 75%;
-    height: 75%;
-    border-radius: 8px;
-    margin: 1rem;
-}
-
 /* Utilities */
 .App {
     display: grid;
@@ -86,12 +79,6 @@ img {
     margin-bottom: 1rem;
 }
 
-.large {
-    font-size: 3rem;
-    line-height: 1.2;
-    margin-bottom: 1rem;
-}
-
 .lead {
     font-size: 1.5rem;
     margin-bottom: 1rem;
@@ -107,10 +94,6 @@ img {
 
 .text-dark {
     color: var(--dark-color);
-}
-
-.text-success {
-    color: var(--success-color);
 }
 
 .text-danger {
@@ -145,81 +128,6 @@ img {
     padding: 1rem;
     border: #ccc 1px dotted;
     margin: 0.7rem 0;
-}
-
-/* List */
-.list {
-    margin: 0.5rem 0;
-}
-
-.list li {
-    padding-bottom: 0.3rem;
-}
-
-/* Padding */
-.p {
-    padding: 0.5rem;
-}
-
-.p-1 {
-    padding: 1rem;
-}
-
-.p-2 {
-    padding: 2rem;
-}
-
-.p-3 {
-    padding: 3rem;
-}
-
-.py {
-    padding: 0.5rem 0;
-}
-
-.py-1 {
-    padding: 1rem 0;
-}
-
-.py-2 {
-    padding: 2rem 0;
-}
-
-.py-3 {
-    padding: 3rem 0;
-}
-
-/* Margin */
-.m {
-    margin: 0.5rem;
-}
-
-.m-1 {
-    margin: 1rem;
-}
-
-.m-2 {
-    margin: 2rem;
-}
-
-.m-3 {
-    margin: 3rem;
-}
-
-.my {
-    margin: 0.5rem 0;
-}
-
-.my-1 {
-    margin: 1rem 0;
-}
-
-.my-2 {
-    margin: 2rem 0;
-}
-
-.my-3 {
-    margin: 3rem 0;
 }
 
 /* Grid */
@@ -280,14 +188,6 @@ img {
     background: var(--light-color);
     color: #333;
     border-radius: 5px;
-}
-
-.alert {
-    padding: 0.7rem;
-    margin: 1rem 0;
-    opacity: 0.9;
-    background: var(--light-color);
-    color: #333;
 }
 
 .btn-primary,
@@ -414,57 +314,6 @@ table th {
     margin-right: 0.6rem;
 }
 
-@media screen and (min-width: 768px) {
-    .navbar {
-        display: flex;
-        justify-content: space-between;
-        padding-bottom: 0;
-        height: 48px;
-        align-items: center;
-    }
-}
-
-/* Mobile Styles */
-@media (max-width: 768px) {
-    .hide-sm {
-        display: none;
-    }
-
-    .grid-2,
-    .grid-3,
-    .grid-4 {
-        grid-template-columns: 1fr;
-    }
-
-    /* Text Styles */
-    .x-large {
-        font-size: 3rem;
-    }
-
-    .large {
-        font-size: 2rem;
-    }
-
-    .lead {
-        font-size: 1rem;
-    }
-
-    /* Navbar */
-    .navbar {
-        display: flex;
-        text-align: center;
-    }
-
-    .navbar ul {
-        text-align: center;
-        justify-content: center;
-    }
-
-    .navbar li {
-        font-size: small;
-    }
-}
-
 /*Allows users to scroll through images on project page*/
 .scrolling-container {
     display: grid;
@@ -511,6 +360,7 @@ table th {
 
 .detail-page {
     display: grid;
+    margin: 1rem;
     grid-template-rows: 40% 30% 30%;
 }
 
@@ -543,3 +393,387 @@ input[type=submit] {
 input[type=submit]:hover {
     background-color: #45a049;
 }
+
+/*Solidworks popup CSS*/
+.detail-page {
+    margin: 1rem;
+    grid-template-rows: 40% 30% 30%;
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    width: 90%;
+}
+
+.popup-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    margin: 1rem;
+}
+
+.pdf-link {
+    color: var(--success-color);
+    font-size: 3rem;
+    line-height: 1.2;
+    margin: auto;
+}
+
+.detail-about {
+    margin: auto;
+}
+
+/*Art Gallery*/
+.art-preview {
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+}
+
+.art-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 100%;
+}
+
+.profile-preview {
+    padding: 1rem 0.25rem 1rem 0.25rem;
+    border: #ccc 1px ridge;
+    margin: 0.5rem;
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    height: 263px;
+    width: 320px;
+}
+
+/*Mobile screen sizing*/
+@media screen and (min-width: 320px) and (max-width: 375px) {
+    .container {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+    }
+
+    .scrolling {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .scrolling-container {
+        height: 150px;
+        padding: 0;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .scrolling-item {
+        height: 100%;
+        width: 100%;
+    }
+
+    .detail-page {
+        height: 50%;
+        width: 100%;
+        justify-content: center;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .popup-image {
+        justify-content: center;
+        margin: 0.5rem 1rem 0.5rem 1rem;
+        height: 150px;
+        width: 250px;
+    }
+
+    .pdf-link {
+        font-size: large;
+        justify-content: center;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .detail-about {
+        font-size: small;
+        justify-content: center;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media screen and (min-width: 375px) and (max-width: 450px) {
+    .container {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+    }
+
+    .scrolling {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .scrolling-container {
+        height: 150px;
+        padding: 0;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .scrolling-item {
+        height: 100%;
+        width: 100%;
+    }
+
+    .detail-page {
+        height: 50%;
+        width: 100%;
+        justify-content: center;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .popup-image {
+        justify-content: center;
+        margin: 0.5rem 1rem 0.5rem 1rem;
+        height: 150px;
+        width: 300px;
+    }
+
+    .pdf-link {
+        font-size: large;
+        justify-content: center;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .detail-about {
+        font-size: small;
+        justify-content: center;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media screen and (min-width: 450px) and (max-width: 500px) {
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 0;
+        height: 48px;
+        align-items: center;
+    }
+
+    .container {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+    }
+
+    .scrolling {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .scrolling-container {
+        height: 150px;
+        padding: 0;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .scrolling-item {
+        height: 100%;
+        width: 100%;
+    }
+
+    .detail-page {
+        height: 50%;
+        width: 100%;
+        justify-content: center;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .popup-image {
+        justify-content: center;
+        margin: 0.5rem 1rem 0.5rem 1rem;
+        height: 150px;
+        width: 300px;
+    }
+
+    .pdf-link {
+        font-size: large;
+        justify-content: center;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .detail-about {
+        font-size: small;
+        justify-content: center;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 768px) {
+    .container {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+    }
+
+    .scrolling {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .scrolling-container {
+        height: 200px;
+        padding: 0;
+        position: absolute;
+        top: 0;
+        margin-bottom: 10px;
+        margin-top: 5px;
+    }
+
+    .scrolling-item {
+        height: 100%;
+        width: 100%;
+    }
+
+    .detail-page {
+        height: 50%;
+        width: 100%;
+        justify-content: center;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .popup-image {
+        justify-content: center;
+        margin: 0.5rem auto 0.5rem auto;
+        height: 250px;
+        width: 325px;
+    }
+
+    .pdf-link {
+        font-size: large;
+        justify-content: center;
+        margin: 0 auto 10px auto;
+    }
+
+    .detail-about {
+        font-size: medium;
+        justify-content: center;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 0.25rem;
+    }
+}
+
+@media screen and (min-width: 770px) and (max-width: 1030px) {
+    .container {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+    }
+    .scrolling {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .scrolling-container {
+        height: 250px;
+        padding: 0;
+        position: absolute;
+        top: 0;
+        margin-bottom: 10px;
+        margin-top: 5px;
+        margin-left: 0;
+    }
+
+    .scrolling-item {
+        height: 100%;
+        width: 100%;
+    }
+
+    .scrolling-img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .detail-page {
+        height: 50%;
+        width: 100%;
+        justify-content: center;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .popup-image {
+        justify-content: center;
+        margin: 0.5rem auto 0.5rem auto;
+        height: 275px;
+        width: 325px;
+    }
+
+    .pdf-link {
+        font-size: large;
+        justify-content: center;
+        margin: 0 auto 10px auto;
+    }
+
+    .detail-about {
+        font-size: medium;
+        justify-content: center;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 0.25rem;
+    }
+}
+

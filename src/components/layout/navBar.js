@@ -15,13 +15,7 @@ const NavBar = () => {
                     <Link to='/projects'>Projects</Link>
                 </li>
                 <li>
-                    <Link to='/lines'>Crazy Lines</Link>
-                </li>
-                <li>
-                    <Link to='/curved'>Curved Lines</Link>
-                </li>
-                <li>
-                    <Link to='/smile'>Smile!</Link>
+                    <Link to='/artgallery'>Art Gallery</Link>
                 </li>
                 <li>
                     <Link to='/contact'>Contact</Link>

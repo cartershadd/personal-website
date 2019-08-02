@@ -4,10 +4,10 @@ import knurledScrew from '../../drawings/knurledScrew.PDF';
 
 const KnurledScrew = () => {
     return (
-        <div className="all-center">
+        <div className="detail-page">
             <img src={goldScrew} alt="screw" className="popup-image"/>
-            <a href={knurledScrew} className="large text-success">Knurled Screw Drawing PDF</a>
-            <p>
+            <a href={knurledScrew} className="pdf-link">Knurled Screw Drawing PDF</a>
+            <p className="detail-about">
                This is a screw with a knurled cap.
             </p>
         </div>

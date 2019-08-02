@@ -4,10 +4,10 @@ import manifoldpipe from '../../drawings/manifoldpipe.PDF';
 
 const ManifoldPipe = () => {
     return (
-        <div className="all-center">
+        <div className="detail-page">
             <img src={manifoldPipe} alt="pipe" className="popup-image"/>
-            <a href={manifoldpipe} className="large text-success">Exhaust Manifold Drawing PDF</a>
-            <p>
+            <a href={manifoldpipe} className="pdf-link">Exhaust Manifold Drawing PDF</a>
+            <p className="detail-about">
                 This is an exhaust manifold I made in Solidworks. The gold finish is just to make it look extra fancy.
             </p>
         </div>
