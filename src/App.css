@@ -22,12 +22,6 @@ html {
     height: 100%;
 }
 
-.ball-canvas, .smile-canvas, .line-canvas, .curved-canvas {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
@@ -35,6 +29,16 @@ body {
     background-color: #fff;
     color: #333;
     margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+
+.ball-canvas, .smile-canvas, .line-canvas, .curved-canvas {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin-top: 10px;
 }
 
 a {
@@ -60,7 +64,6 @@ img {
 .App {
     display: grid;
     grid-template-rows: 48px auto;
-    overflow-y: hidden;
     height: 100%;
     margin: 0;
 }
@@ -128,25 +131,6 @@ img {
     padding: 1rem;
     border: #ccc 1px dotted;
     margin: 0.7rem 0;
-}
-
-/* Grid */
-.grid-2 {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 1rem;
-}
-
-.grid-3 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1rem;
-}
-
-.grid-4 {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 1rem;
 }
 
 .btn {
@@ -294,8 +278,8 @@ table th {
 /* Navbar */
 .navbar {
     font-size: 18px;
-    background-image: linear-gradient(260deg, #6213ae 0%, #2c91cf 100%);
-    padding-bottom: 10px;
+    background-image: linear-gradient(260deg, #1144ae 0%, #2c91cf 100%);
+    margin-bottom: 10px;
     align-self: start;
 }
 
@@ -321,15 +305,16 @@ table th {
     grid-column: 2 / -2;
     grid-template-columns: repeat(10, 40%);
     grid-template-rows: minmax(150px, 1fr);
-    overflow: hidden;
     overflow-x: scroll;
     scroll-snap-type: x proximity;
     padding-bottom: 15px;
     margin-bottom: -5px;
+    overflow-y: hidden;
 }
 
 .scrolling {
     height: 100%;
+    overflow-y: hidden;
     background: #DBD0BC;
     padding: 15px;
     display: grid;
@@ -362,6 +347,12 @@ table th {
     display: grid;
     margin: 1rem;
     grid-template-rows: 40% 30% 30%;
+}
+
+/*About Page*/
+.about-section {
+    margin: 0.2rem;
+    padding: 0.25rem;
 }
 
 /*Contact Form*/
@@ -427,6 +418,8 @@ input[type=submit]:hover {
     vertical-align: top;
     display: inline-block;
     text-align: center;
+    margin-top: 5px;
+    overflow-y: scroll;
 }
 
 .art-img {
@@ -438,14 +431,13 @@ input[type=submit]:hover {
 }
 
 .profile-preview {
-    padding: 1rem 0.25rem 1rem 0.25rem;
-    border: #ccc 1px ridge;
+    padding: 0;
     margin: 0.5rem;
     vertical-align: top;
     display: inline-block;
     text-align: center;
     text-decoration: none;
-    height: 263px;
+    height: 250px;
     width: 320px;
 }
 
@@ -513,64 +505,12 @@ input[type=submit]:hover {
 }
 
 @media screen and (min-width: 375px) and (max-width: 450px) {
-    .container {
-        width: 100%;
-        height: 100%;
-        padding: 0;
-    }
-
-    .scrolling {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        overflow-y: scroll;
-        overflow-x: hidden;
-        margin-top: 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .scrolling-container {
-        height: 150px;
-        padding: 0;
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-
-    .scrolling-item {
-        height: 100%;
-        width: 100%;
-    }
-
-    .detail-page {
-        height: 50%;
-        width: 100%;
-        justify-content: center;
-        margin-right: auto;
-        margin-left: auto;
-    }
 
     .popup-image {
         justify-content: center;
         margin: 0.5rem 1rem 0.5rem 1rem;
         height: 150px;
         width: 300px;
-    }
-
-    .pdf-link {
-        font-size: large;
-        justify-content: center;
-        margin-right: auto;
-        margin-left: auto;
-    }
-
-    .detail-about {
-        font-size: small;
-        justify-content: center;
-        margin-right: auto;
-        margin-left: auto;
     }
 }
 
@@ -583,86 +523,15 @@ input[type=submit]:hover {
         align-items: center;
     }
 
-    .container {
-        width: 100%;
-        height: 100%;
-        padding: 0;
-    }
-
-    .scrolling {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        overflow-y: scroll;
-        overflow-x: hidden;
-        margin-top: 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .scrolling-container {
-        height: 150px;
-        padding: 0;
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-
-    .scrolling-item {
-        height: 100%;
-        width: 100%;
-    }
-
-    .detail-page {
-        height: 50%;
-        width: 100%;
-        justify-content: center;
-        margin-right: auto;
-        margin-left: auto;
-    }
-
     .popup-image {
         justify-content: center;
         margin: 0.5rem 1rem 0.5rem 1rem;
         height: 150px;
         width: 300px;
     }
-
-    .pdf-link {
-        font-size: large;
-        justify-content: center;
-        margin-right: auto;
-        margin-left: auto;
-    }
-
-    .detail-about {
-        font-size: small;
-        justify-content: center;
-        margin-right: auto;
-        margin-left: auto;
-    }
 }
 
 @media screen and (min-width: 500px) and (max-width: 768px) {
-    .container {
-        width: 100%;
-        height: 100%;
-        padding: 0;
-    }
-
-    .scrolling {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        overflow-y: hidden;
-        overflow-x: hidden;
-        margin-top: 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
 
     .scrolling-container {
         height: 200px;
@@ -671,19 +540,6 @@ input[type=submit]:hover {
         top: 0;
         margin-bottom: 10px;
         margin-top: 5px;
-    }
-
-    .scrolling-item {
-        height: 100%;
-        width: 100%;
-    }
-
-    .detail-page {
-        height: 50%;
-        width: 100%;
-        justify-content: center;
-        margin-right: auto;
-        margin-left: auto;
     }
 
     .popup-image {
@@ -709,11 +565,7 @@ input[type=submit]:hover {
 }
 
 @media screen and (min-width: 770px) and (max-width: 1030px) {
-    .container {
-        width: 100%;
-        height: 100%;
-        padding: 0;
-    }
+
     .scrolling {
         width: 100%;
         height: 100%;
@@ -737,22 +589,9 @@ input[type=submit]:hover {
         margin-left: 0;
     }
 
-    .scrolling-item {
-        height: 100%;
-        width: 100%;
-    }
-
     .scrolling-img {
         height: 100%;
         width: 100%;
-    }
-
-    .detail-page {
-        height: 50%;
-        width: 100%;
-        justify-content: center;
-        margin-right: auto;
-        margin-left: auto;
     }
 
     .popup-image {
@@ -766,14 +605,6 @@ input[type=submit]:hover {
         font-size: large;
         justify-content: center;
         margin: 0 auto 10px auto;
-    }
-
-    .detail-about {
-        font-size: medium;
-        justify-content: center;
-        margin-right: auto;
-        margin-left: auto;
-        margin-top: 0.25rem;
     }
 }
 

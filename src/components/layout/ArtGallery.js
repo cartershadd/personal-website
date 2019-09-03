@@ -9,15 +9,15 @@ class ArtGallery extends Component {
         return (
                 <div className="art-preview">
                     <Link to={'/artgallery/curvedlines'} className="profile-preview">
-                        <img src={curvedLines} alt="art" className="art-img"/>
+                        <img src={curvedLines} alt="art" className="art-img round-img"/>
                     </Link>
 
                     <Link to={'/artgallery/crazylines'} className="profile-preview">
-                        <img src={crazyLines} alt="art" className="art-img"/>
+                        <img src={crazyLines} alt="art" className="art-img round-img"/>
                     </Link>
 
                     <Link to={'/artgallery/smile'} className="profile-preview">
-                        <img src={smile} alt="art" className="art-img"/>
+                        <img src={smile} alt="art" className="art-img round-img"/>
                     </Link>
 
                 </div>
