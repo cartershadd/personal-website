@@ -4,8 +4,8 @@ import YouTube from 'react-youtube';
 class CloudVideo extends React.Component {
     render() {
         const opts = {
-            height: '150%',
-            width: '300',
+            height: '310px',
+            width: '310px',
             playerVars: { // https://developers.google.com/youtube/player_parameters
                 autoplay: 1
             },
