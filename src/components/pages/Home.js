@@ -102,9 +102,6 @@ class Canvas extends React.Component {
             for (let i = 0; i < ballArray.length; i++) {
                 ballArray[i].update();
             }
-            // objects.forEach(object => {
-            //  object.update()
-            // })
         }
 
         init();
@@ -114,7 +111,10 @@ class Canvas extends React.Component {
 
     render() {
         return (
-            <canvas ref="canvas" className="ball-canvas"/>
+            <div className="ball-canvas-wrap">
+                <p className="greeting all-center">This is Carter and welcome to my website!</p>
+                <canvas ref="canvas" className="ball-canvas"/>
+            </div>
         )
     }
 }

@@ -1,99 +1,127 @@
-import React from 'react';
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
-import crank from '../../img/crank.png';
-import woodenSpoon from '../../img/woodenSpoon.png';
-import goldScrew from '../../img/goldScrew.png';
-import manifoldPipe from '../../img/manifoldPipe.JPG';
-import nutNBolt from '../../img/nutNBolt.JPG';
-import testObject from '../../img/testObject.JPG';
-import designToolsPart from '../../img/designToolsPart.png';
-import RP1 from '../../img/RP1.JPG';
-import testImage1 from '../../img/testImage1.JPG';
-import sheetmetalLofted from '../../img/sheetmetalLofted.png';
-import TestImage from './TestImage';
-import RouterPlane from './RouterPlane';
-import ManifoldPipe from './ManifoldPipe';
-import KnurledScrew from './KnurledScrew';
-import LoftedSheet from './LoftedSheet.js';
-import WoodenSpoon from "./WoodenSpoon";
-import TestObject from "./TestObject";
-import DesignTool from "./DesignTool";
-import CrankShaft from "./CrankShaft";
-import NutBolt from "./NutBolt";
+import React, {Component} from 'react';
+import sheetMetalLofted from "../../drawings/sheetMetalLofted.PDF";
+import nutBolt from '../../drawings/nutBolt.PDF';
+import crankshaft from '../../drawings/crankshaft.PDF';
+import designTool from '../../drawings/designTool.PDF';
+import knurledScrew from '../../drawings/knurledScrew.PDF';
+import manifoldPipe from '../../drawings/manifoldpipe.PDF';
+import routerPlaneAssembly from '../../drawings/routerPlaneAssembly.PDF';
+import spoon from '../../drawings/spoon.PDF';
+import TestObject1 from '../../drawings/TestObject1.PDF';
+import testPart from '../../drawings/testPart.PDF';
+import ProjectDetail from "./ProjectDetail";
 
-function Projects() {
-    return (
-        <Router>
+class Projects extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            project: {
+                id: 1,
+                img: [process.env.PUBLIC_URL + '/img/nutNBolt.jpg'],
+                linkText: "Nut & Bolt Assembly PDF",
+                link: nutBolt,
+                about: "The basic nut and bolt, made in Solidworks."
+            },
+            projectList: [
+                {
+                    id: 1,
+                    img: [process.env.PUBLIC_URL + '/img/nutNBolt.jpg'],
+                    linkText: "Nut & Bolt Assembly PDF",
+                    link: nutBolt,
+                    about: "The basic nut and bolt, made in Solidworks."
+                },
+                {
+                    id: 2,
+                    img: [process.env.PUBLIC_URL + '/img/crank.png'],
+                    linkText: "Crankshaft PDF",
+                    link: crankshaft,
+                    about: "This is a crankshaft I made in Solidworks. Really cool part to make!"
+                },
+                {
+                    id: 3,
+                    img: [process.env.PUBLIC_URL + '/img/manifoldPipe.jpg'],
+                    linkText: "Exhaust Manifold PDF",
+                    link: manifoldPipe,
+                    about: "This is an exhaust manifold I made in Solidworks. The gold finish is just to make it look extra fancy."
+                },
+                {
+                    id: 4,
+                    img: [process.env.PUBLIC_URL + '/img/testObject.jpg'],
+                    linkText: "Test Object PDF",
+                    link: TestObject1,
+                    about: "This is another shape from the Solidworks certification test prep."
+                },
+                {
+                    id: 5,
+                    img: [process.env.PUBLIC_URL + '/img/goldScrew.png'],
+                    linkText: "Knurled Screw PDF",
+                    link: knurledScrew,
+                    about: "This is a screw with a knurled cap."
+                },
+                {
+                    id: 6,
+                    img: [process.env.PUBLIC_URL + '/img/woodenSpoon.png'],
+                    linkText: "Spoon PDF",
+                    link: spoon,
+                    about: "Just a spoon I made for fun."
+                },
+                {
+                    id: 7,
+                    img: [process.env.PUBLIC_URL + '/img/designToolsPart.png'],
+                    linkText: "Sheet Metal Design PDF",
+                    link: designTool,
+                    about: "Making this piece involved the use of the Lofting tool in Solidworks."
+                },
+                {
+                    id: 8,
+                    img: [process.env.PUBLIC_URL + '/img/RP1.jpg'],
+                    linkText: "Router Plane Assembly PDF",
+                    link: routerPlaneAssembly,
+                    about: "This is a router plane, often used in woodworking."
+                },
+                {
+                    id: 9,
+                    img: [process.env.PUBLIC_URL + '/img/sheetmetalLofted.png'],
+                    linkText: "Sheet Metal 2 PDF",
+                    link: sheetMetalLofted,
+                    about: "Another piece of metal, bent by the Lofting tool."
+                },
+                {
+                    id: 10,
+                    img: [process.env.PUBLIC_URL + '/img/testImage1.jpg'],
+                    linkText: "Test Image PDF",
+                    link: testPart,
+                    about: "This is a part from the Solidworks certification test prep, so you can practice using the software and making cool stuff like this."
+                }
+            ]
+        }
+    }
+
+    imgClick(project) {
+        this.setState({project: project})
+
+    }
+
+    render() {
+        return (
             <div className="scrolling">
                 <ul className="scrolling-container">
-                    <li className="scrolling-item">
-                        <Link to="/projects/nutbolt" className="link-scroll">
-                            <img src={nutNBolt} alt="bolt" className="scrolling-img"/>
-                        </Link>
+                    {this.state.projectList.map((project, index) =>
+                    <li key={index} className="scrolling-item">
+                        <div className="link-scroll">
+                            <img src={project.img} alt="img" className="scrolling-img" onClick={() => this.imgClick(project)}/>
+                        </div>
                     </li>
-                    <li className="scrolling-item">
-                        <Link to="/projects/crankshaft" className="link-scroll">
-                            <img src={crank} alt="crankshaft" className="scrolling-img"/>
-                        </Link>
-                    </li>
-                    <li className="scrolling-item">
-                        <Link to="/projects/manifoldpipe" className="link-scroll">
-                            <img src={manifoldPipe} alt="pipe" className="scrolling-img"/>
-                        </Link>
-                    </li>
-                    <li className="scrolling-item">
-                        <Link to="/projects/testobject" className="link-scroll">
-                            <img src={testObject} alt="object" className="scrolling-img"/>
-                        </Link>
-                    </li>
-                    <li className="scrolling-item">
-                        <Link to="/projects/knurledscrew" className="link-scroll">
-                            <img src={goldScrew} alt="screw" className="scrolling-img"/>
-                        </Link>
-                    </li>
-                    <li className="scrolling-item">
-                        <Link to="/projects/woodenspoon" className="link-scroll">
-                            <img src={woodenSpoon} alt="spoon" className="scrolling-img"/>
-                        </Link>
-                    </li>
-                    <li className="scrolling-item">
-                        <Link to="/projects/designtool" className="link-scroll">
-                            <img src={designToolsPart} alt="tool" className="scrolling-img"/>
-                        </Link>
-                    </li>
-                    <li className="scrolling-item">
-                        <Link to="/projects/routerplane" className="link-scroll">
-                            <img src={RP1} alt="rp1" className="scrolling-img"/>
-                        </Link>
-                    </li>
-                    <li className="scrolling-item">
-                        <Link to="/projects/loftedsheet" className="link-scroll">
-                            <img src={sheetmetalLofted} alt="lofted" className="scrolling-img"/>
-                        </Link>
-                    </li>
-                    <li className="scrolling-item">
-                        <Link to="/projects/testimage" className="link-scroll">
-                            <img src={testImage1} alt="test" className="scrolling-img"/>
-                        </Link>
-                    </li>
+                    )}
                 </ul>
 
-                <Route exact path="/projects/nutbolt" component={NutBolt}/>
-                <Route exact path="/projects/crankshaft" component={CrankShaft}/>
-                <Route exact path="/projects/manifoldpipe" component={ManifoldPipe}/>
-                <Route exact path="/projects/testobject" component={TestObject}/>
-                <Route exact path="/projects/knurledscrew" component={KnurledScrew}/>
-                <Route exact path="/projects/woodenspoon" component={WoodenSpoon}/>
-                <Route exact path="/projects/designtool" component={DesignTool}/>
-                <Route exact path="/projects/routerplane" component={RouterPlane}/>
-                <Route exact path="/projects/loftedsheet" component={LoftedSheet}/>
-                <Route exact path="/projects/testimage" component={TestImage}/>
+                <ProjectDetail project={this.state.project}/>
 
             </div>
-        </Router>
-    );
 
-};
+        )
+    }
+}
 
 
 export default Projects;
