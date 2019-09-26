@@ -91,7 +91,7 @@ class Projects extends Component {
                     img: [process.env.PUBLIC_URL + '/img/testImage1.jpg'],
                     linkText: "Test Image PDF",
                     link: testPart,
-                    about: "This is a part from the Solidworks certification test prep, so you can practice using the software and making cool stuff like this."
+                    about: "This is a part from the Solidworks certification test prep."
                 }
             ]
         }

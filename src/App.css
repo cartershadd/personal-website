@@ -20,6 +20,12 @@ html {
     padding: 0;
     width: 100%;
     height: 100%;
+    background-size: 400% 400%;
+    background: linear-gradient(-45deg, #7ecefd, #1e758b, #23a6d5, #23d5ab);
+
+    -webkit-animation: Animation 5s ease infinite;
+    -moz-animation: Animation 5s ease infinite;
+    animation: Animation 5s ease infinite;
 }
 
 body {
@@ -30,12 +36,6 @@ body {
     margin: 0;
     padding: 0;
     height: 100%;
-    background-size: 200% 200%;
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-
-    -webkit-animation: Animation 5s ease infinite;
-    -moz-animation: Animation 5s ease infinite;
-    animation: Animation 5s ease infinite;
 }
 
 @keyframes gradientBG {
@@ -300,7 +300,7 @@ table th {
 /* Navbar */
 .navbar {
     font-size: 18px;
-    background-image: linear-gradient(260deg, darkgreen,seagreen, #1144ae, #2c91cf, slateblue, firebrick, darkred);
+    background-image: linear-gradient(260deg, darkgreen,seagreen, #1144ae, #2c91cf, slateblue);
     margin-bottom: 0.25rem;
     align-self: start;
 }
@@ -322,9 +322,10 @@ table th {
 
 /*Allows users to scroll through images on project page*/
 .scrolling {
-    height: 60rem;
-    padding: 15px;
+    height: 47rem;
+    padding: 0.25rem;
     display: grid;
+    margin-bottom: 0.2rem;
     grid-template-columns: 100%;
 }
 
@@ -365,29 +366,28 @@ table th {
 /*Solidworks popup CSS*/
 .detail-page {
     margin: 1rem;
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
 .popup-image {
-    height: 30rem;
-    width: 30rem;
+    height: 20rem;
+    width: 20rem;
     border-radius: 2rem;
     margin: 0 auto;
 }
 
 .pdf-link {
     color: cornsilk;
-    font-size: 3rem;
+    font-size: 2rem;
     line-height: 1.2;
     margin: 0.25rem;
 }
 
 .detail-about {
     margin: 0.25rem;
-    font-size: 2rem;
+    font-size: 1rem;
     color: cornsilk;
 }
 
@@ -464,42 +464,12 @@ input[type=submit]:hover {
         padding: 0;
     }
 
-    /*.detail-page {*/
-    /*    height: 50%;*/
-    /*    width: 100%;*/
-    /*    margin-right: auto;*/
-    /*    margin-left: auto;*/
-    /*}*/
-
-    /*.popup-image {*/
-    /*    justify-content: center;*/
-    /*    margin: 0.5rem 1rem 0.5rem 1rem;*/
-    /*    height: 150px;*/
-    /*    width: 250px;*/
-    /*}*/
-
     .pdf-link {
         font-size: large;
         justify-content: center;
         margin-right: auto;
         margin-left: auto;
     }
-
-    /*.detail-about {*/
-    /*    font-size: small;*/
-    /*    justify-content: center;*/
-    /*    margin-right: auto;*/
-    /*    margin-left: auto;*/
-    /*}*/
-}
-
-@media screen and (min-width: 375px) and (max-width: 450px) {
-    /*.popup-image {*/
-    /*    justify-content: center;*/
-    /*    margin: 0.5rem 1rem 0.5rem 1rem;*/
-    /*    height: 150px;*/
-    /*    width: 300px;*/
-    /*}*/
 }
 
 @media screen and (min-width: 450px) and (max-width: 500px) {
@@ -510,94 +480,40 @@ input[type=submit]:hover {
         height: 48px;
         align-items: center;
     }
-
-    /*.popup-image {*/
-    /*    justify-content: center;*/
-    /*    margin: 0.5rem 1rem 0.5rem 1rem;*/
-    /*    height: 150px;*/
-    /*    width: 300px;*/
-    /*}*/
 }
 
 @media screen and (min-width: 500px) and (max-width: 768px) {
-    /*.scrolling {*/
-    /*    align-items: center;*/
+
+    /*.popup-image {*/
+    /*    justify-content: center;*/
+    /*    margin: 0.5rem auto 0.5rem auto;*/
+    /*    height: 250px;*/
+    /*    width: 325px;*/
+    /*    padding: 2rem;*/
     /*}*/
 
-    .popup-image {
-        justify-content: center;
-        margin: 0.5rem auto 0.5rem auto;
-        height: 250px;
-        width: 325px;
-        padding: 2rem;
-    }
+    /*.pdf-link {*/
+    /*    font-size: large;*/
+    /*    justify-content: center;*/
+    /*    margin: 0 auto 10px auto;*/
+    /*}*/
 
-    .pdf-link {
-        font-size: large;
-        justify-content: center;
-        margin: 0 auto 10px auto;
-    }
-
-    .detail-about {
-        font-size: medium;
-        justify-content: center;
-        margin-right: auto;
-        margin-left: auto;
-        margin-top: 0.25rem;
-    }
-
-    .detail-page {
-        order: 2;
-    }
+    /*.detail-about {*/
+    /*    font-size: medium;*/
+    /*    justify-content: center;*/
+    /*    margin-right: auto;*/
+    /*    margin-left: auto;*/
+    /*    margin-top: 0.25rem;*/
+    /*}*/
 }
 
 
 
 @media screen and (min-width: 770px) and (max-width: 1030px) {
-
-    /*.scrolling {*/
-    /*    width: 100%;*/
-    /*    height: 100%;*/
-    /*    position: absolute;*/
-    /*    overflow-y: hidden;*/
-    /*    overflow-x: hidden;*/
-    /*    margin-top: 10px;*/
-    /*    display: flex;*/
-    /*    flex-direction: column;*/
-    /*    justify-content: center;*/
-    /*    align-items: center;*/
-    /*}*/
-
-    /*.scrolling-container {*/
-    /*    height: 250px;*/
-    /*    padding: 0;*/
-    /*    position: absolute;*/
-    /*    top: 0;*/
-    /*    margin-bottom: 10px;*/
-    /*    margin-top: 5px;*/
-    /*    margin-left: 0;*/
-    /*}*/
-
-    /*.scrolling-img {*/
-    /*    height: 100%;*/
-    /*    width: 100%;*/
-    /*}*/
-
-    .popup-image {
-        justify-content: center;
-        margin: 0.5rem auto 0.5rem auto;
-        height: 275px;
-        width: 325px;
-    }
-
     .pdf-link {
         font-size: large;
         justify-content: center;
         margin: 0 auto 10px auto;
-    }
-
-    .art-preview {
-        overflow: hidden;
     }
 }
 
