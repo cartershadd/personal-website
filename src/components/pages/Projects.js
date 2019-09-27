@@ -17,7 +17,7 @@ class Projects extends Component {
         this.state = {
             project: {
                 id: 1,
-                img: [process.env.PUBLIC_URL + '/img/nutNBolt.jpg'],
+                img: [process.env.PUBLIC_URL + '/img/nutNBolt.JPG'],
                 linkText: "Nut & Bolt Assembly PDF",
                 link: nutBolt,
                 about: "The basic nut and bolt, made in Solidworks."
@@ -25,7 +25,7 @@ class Projects extends Component {
             projectList: [
                 {
                     id: 1,
-                    img: [process.env.PUBLIC_URL + '/img/nutNBolt.jpg'],
+                    img: [process.env.PUBLIC_URL + '/img/nutNBolt.JPG'],
                     linkText: "Nut & Bolt Assembly PDF",
                     link: nutBolt,
                     about: "The basic nut and bolt, made in Solidworks."
@@ -39,14 +39,14 @@ class Projects extends Component {
                 },
                 {
                     id: 3,
-                    img: [process.env.PUBLIC_URL + '/img/manifoldPipe.jpg'],
+                    img: [process.env.PUBLIC_URL + '/img/manifoldPipe.JPG'],
                     linkText: "Exhaust Manifold PDF",
                     link: manifoldPipe,
                     about: "This is an exhaust manifold I made in Solidworks. The gold finish is just to make it look extra fancy."
                 },
                 {
                     id: 4,
-                    img: [process.env.PUBLIC_URL + '/img/testObject.jpg'],
+                    img: [process.env.PUBLIC_URL + '/img/testObject.JPG'],
                     linkText: "Test Object PDF",
                     link: TestObject1,
                     about: "This is another shape from the Solidworks certification test prep."
@@ -74,7 +74,7 @@ class Projects extends Component {
                 },
                 {
                     id: 8,
-                    img: [process.env.PUBLIC_URL + '/img/RP1.jpg'],
+                    img: [process.env.PUBLIC_URL + '/img/RP1.JPG'],
                     linkText: "Router Plane Assembly PDF",
                     link: routerPlaneAssembly,
                     about: "This is a router plane, often used in woodworking."
@@ -88,7 +88,7 @@ class Projects extends Component {
                 },
                 {
                     id: 10,
-                    img: [process.env.PUBLIC_URL + '/img/testImage1.jpg'],
+                    img: [process.env.PUBLIC_URL + '/img/testImage1.JPG'],
                     linkText: "Test Image PDF",
                     link: testPart,
                     about: "This is a part from the Solidworks certification test prep."
