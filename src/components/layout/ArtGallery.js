@@ -17,6 +17,14 @@ class ArtGallery extends Component {
                         <img src={"/img/smile.png"} alt="art" className="art-img round-img"/>
                     </Link>
 
+                    <Link to={'/artgallery/reverse'} className="profile-preview">
+                        <img src={"/img/reverseGravity.png"} alt="art" className="art-img round-img"/>
+                    </Link>
+
+                    <Link to={'/artgallery/star'} className="profile-preview">
+                        <img src={"/img/rainbowStar.png"} alt="art" className="art-img round-img"/>
+                    </Link>
+
                 </div>
             )
 

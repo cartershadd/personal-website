@@ -21,7 +21,7 @@ html {
     width: 100%;
     height: 100%;
     background-size: 400% 400%;
-    background: linear-gradient(-45deg, #7ecefd, #1e758b, #23a6d5, #23d5ab);
+    background: linear-gradient(-45deg, #7ecefd, #1e758b, #23a6d5, #007289);
 
     -webkit-animation: Animation 5s ease infinite;
     -moz-animation: Animation 5s ease infinite;
@@ -57,12 +57,11 @@ body {
 
 .greeting {
     padding: 0;
-    font-weight: bold;
     font-size: 1rem;
     color: white;
 }
 
-.ball-canvas, .smile-canvas, .line-canvas, .curved-canvas {
+.ball-canvas, .smile-canvas, .line-canvas, .curved-canvas, .reverse-canvas, .star-canvas {
     width: 100%;
     height: 100%;
     overflow-y: hidden;
@@ -300,9 +299,13 @@ table th {
 /* Navbar */
 .navbar {
     font-size: 18px;
-    background-image: linear-gradient(260deg, darkgreen,seagreen, #1144ae, #2c91cf, slateblue);
     margin-bottom: 0.25rem;
     align-self: start;
+    width: 100%;
+    height: 2rem;
+    position: relative;
+    background-color: #34495e;
+    border-radius: 8px;
 }
 
 .navbar ul {
@@ -311,9 +314,18 @@ table th {
 }
 
 .navbar a {
-    padding: 0.45rem;
-    margin: 0 0.25rem;
-    color: #000000;
+    height: 100%;
+    font-size: 0.75rem;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    margin-right: 0.25rem;
+    margin-left: 0.25rem;
 }
 
 .navbar .welcome span {
@@ -333,7 +345,7 @@ table th {
     display: grid;
     grid-gap: 10px;
     grid-column: 2 / -2;
-    grid-template-columns: repeat(10, 40%);
+    grid-template-columns: repeat(11, 40%);
     overflow-x: scroll;
     scroll-snap-type: x proximity;
     padding-bottom: 15px;
@@ -481,33 +493,6 @@ input[type=submit]:hover {
         align-items: center;
     }
 }
-
-@media screen and (min-width: 500px) and (max-width: 768px) {
-
-    /*.popup-image {*/
-    /*    justify-content: center;*/
-    /*    margin: 0.5rem auto 0.5rem auto;*/
-    /*    height: 250px;*/
-    /*    width: 325px;*/
-    /*    padding: 2rem;*/
-    /*}*/
-
-    /*.pdf-link {*/
-    /*    font-size: large;*/
-    /*    justify-content: center;*/
-    /*    margin: 0 auto 10px auto;*/
-    /*}*/
-
-    /*.detail-about {*/
-    /*    font-size: medium;*/
-    /*    justify-content: center;*/
-    /*    margin-right: auto;*/
-    /*    margin-left: auto;*/
-    /*    margin-top: 0.25rem;*/
-    /*}*/
-}
-
-
 
 @media screen and (min-width: 770px) and (max-width: 1030px) {
     .pdf-link {

@@ -10,6 +10,8 @@ import './App.css';
 import CrazyLines from "./components/pages/CrazyLines";
 import CurvedLines from "./components/pages/CurvedLines";
 import Smile from "./components/pages/Smile";
+import ReverseGravity from "./components/pages/reverseGravity";
+import RainbowStar from "./components/pages/rainbowStar";
 
 const App = () => {
     return (
@@ -25,6 +27,8 @@ const App = () => {
                         <Route exact path={'/artgallery/smile'} component={Smile}/>
                         <Route exact path={'/artgallery/curvedlines'} component={CurvedLines}/>
                         <Route exact path={'/artgallery/crazylines'} component={CrazyLines}/>
+                        <Route exact path={'/artgallery/reverse'} component={ReverseGravity}/>
+                        <Route exact path={'/artgallery/star'} component={RainbowStar}/>
                         <Route exact path={'/contact'} component={ContactMe}/>
                     </Switch>
                 </div>

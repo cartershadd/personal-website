@@ -9,6 +9,7 @@ import routerPlaneAssembly from '../../drawings/routerPlaneAssembly.PDF';
 import spoon from '../../drawings/spoon.PDF';
 import TestObject1 from '../../drawings/TestObject1.PDF';
 import testPart from '../../drawings/testPart.PDF';
+import exhaustManifoldTwisted from '../../drawings/exhaustManifoldTwisted.PDF';
 import ProjectDetail from "./ProjectDetail";
 
 class Projects extends Component {
@@ -92,6 +93,13 @@ class Projects extends Component {
                     linkText: "Test Image PDF",
                     link: testPart,
                     about: "This is a part from the Solidworks certification test prep."
+                },
+                {
+                    id: 11,
+                    img: [process.env.PUBLIC_URL + '/img/twistedExhaust.png'],
+                    linkText: "Twisted Exhaust Manifold",
+                    link: exhaustManifoldTwisted,
+                    about: "Another exhaust manifold, with a twist."
                 }
             ]
         }
