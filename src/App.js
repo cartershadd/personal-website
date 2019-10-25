@@ -12,13 +12,14 @@ import CurvedLines from "./components/pages/CurvedLines";
 import Smile from "./components/pages/Smile";
 import ReverseGravity from "./components/pages/reverseGravity";
 import RainbowStar from "./components/pages/rainbowStar";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-const App = () => {
+function App() {
     return (
-        <Router>
-            <div className='App'>
+        <div className='App'>
+            <Router>
                 <NavBar/>
-                <div className='container'>
+                <div className="background-container">
                     <Switch>
                         <Route exact path={'/'} component={Home}/>
                         <Route exact path={'/about'} component={About}/>
@@ -32,9 +33,10 @@ const App = () => {
                         <Route exact path={'/contact'} component={ContactMe}/>
                     </Switch>
                 </div>
-            </div>
-        </Router>
+            </Router>
+        </div>
+
     );
-};
+}
 
 export default App;

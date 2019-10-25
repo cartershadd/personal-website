@@ -112,7 +112,7 @@ class Canvas extends React.Component {
     render() {
         return (
             <div className="ball-canvas-wrap">
-                <p className="greeting all-center">This is Carter and welcome to my website!</p>
+                <p className="greeting">This is Carter and welcome to my website!</p>
                 <canvas ref="canvas" className="ball-canvas"/>
             </div>
         )

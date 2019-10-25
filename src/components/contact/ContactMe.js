@@ -2,7 +2,7 @@ import React from 'react';
 
 const ContactMe = () => {
     return (
-        <div className="card all-center contact">
+        <div className="contact">
             <h2>Contact Me</h2>
             <div>
                 <form action="/action_page.php">
@@ -23,8 +23,7 @@ const ContactMe = () => {
 
                     <label>Message</label>
                     <textarea id="text" name="text" placeholder="Write something..."></textarea>
-                    <input type="submit" value="Submit" />
-
+                    <input type="submit" value="Submit" className="submit" />
                 </form>
             </div>
         </div>

@@ -5,7 +5,7 @@ const About = () => {
     return (
         <div className="about-section all-center my-1">
             <h1>About Me</h1>
-            <p>
+            <p className="about-bio">
                 My name is Carter and I enjoy making things. I have been teaching myself HTML, CSS and JavaScript, and look at me now! :)
                 <br></br>
                 Under the Projects tab,  you'll find different items I made in Solidworks (3D CAD/CAM software).
@@ -17,7 +17,7 @@ const About = () => {
             </p>
             <CloudVideo/>
             <br></br>
-            <p>
+            <p className="about-bio">
                 I also made this website and have a few coding projects under my belt. Some websites I made are listed below, as is the link to my Github page.
             </p>
             <br></br>
