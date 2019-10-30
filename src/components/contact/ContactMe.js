@@ -7,7 +7,7 @@ const ContactMe = () => {
             <div>
                 <form action="/action_page.php">
                     <label>First Name</label>
-                    <input type="text" id="fname" name="firstname" placeholder="Your name.." />
+                    <input type="text" id="fname" name="firstname" placeholder="Your first name.." />
 
                     <label>Last Name</label>
                     <input type="text" id="lname" name="lastname" placeholder="Your last name.." />
