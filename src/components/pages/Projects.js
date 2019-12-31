@@ -16,13 +16,6 @@ class Projects extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            project: {
-                id: 1,
-                img: [process.env.PUBLIC_URL + '/img/nutNBolt.JPG'],
-                linkText: "Nut & Bolt Assembly PDF",
-                link: nutBolt,
-                about: "The basic nut and bolt, made in Solidworks."
-            },
             projectList: [
                 {
                     id: 1,
