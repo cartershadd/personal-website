@@ -19,20 +19,18 @@ function App() {
         <div className='App'>
             <Router>
                 <NavBar/>
-                <div className="background-container">
-                    <Switch>
-                        <Route exact path={'/'} component={Home}/>
-                        <Route exact path={'/about'} component={About}/>
-                        <Route exact path={'/projects'} component={Projects}/>
-                        <Route exact path={'/artgallery'} component={ArtGallery}/>
-                        <Route exact path={'/artgallery/smile'} component={Smile}/>
-                        <Route exact path={'/artgallery/curvedlines'} component={CurvedLines}/>
-                        <Route exact path={'/artgallery/crazylines'} component={CrazyLines}/>
-                        <Route exact path={'/artgallery/reverse'} component={ReverseGravity}/>
-                        <Route exact path={'/artgallery/star'} component={RainbowStar}/>
-                        <Route exact path={'/contact'} component={ContactMe}/>
-                    </Switch>
-                </div>
+                <Switch>
+                    <Route exact path={'/'} component={Home}/>
+                    <Route exact path={'/about'} component={About}/>
+                    <Route exact path={'/projects'} component={Projects}/>
+                    <Route exact path={'/artgallery'} component={ArtGallery}/>
+                    <Route exact path={'/artgallery/smile'} component={Smile}/>
+                    <Route exact path={'/artgallery/curvedlines'} component={CurvedLines}/>
+                    <Route exact path={'/artgallery/crazylines'} component={CrazyLines}/>
+                    <Route exact path={'/artgallery/reverse'} component={ReverseGravity}/>
+                    <Route exact path={'/artgallery/star'} component={RainbowStar}/>
+                    <Route exact path={'/contact'} component={ContactMe}/>
+                </Switch>
             </Router>
         </div>
 

@@ -19,7 +19,7 @@ class Projects extends Component {
         this.state = {
             project: {
                 id: 1,
-                img: [process.env.PUBLIC_URL + '/img/keyHolder.JPG'],
+                img: [process.env.PUBLIC_URL + '/img/keyHolder.jpg'],
                 linkText: "Keyholder PDF",
                 link: keyHolder,
                 about: "A cover I made for car keys."
@@ -27,7 +27,7 @@ class Projects extends Component {
             projectList: [
                 {
                     id: 1,
-                    img: [process.env.PUBLIC_URL + '/img/keyHolder.JPG'],
+                    img: [process.env.PUBLIC_URL + '/img/keyHolder.jpg'],
                     linkText: "Keyholder PDF",
                     link: keyHolder,
                     about: "A cover I made for car keys."
