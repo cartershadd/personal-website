@@ -8,7 +8,9 @@ class NavBar extends Component {
         return (
             <div>
                 <Navbar collapseOnSelect expand="*" bg="dark" variant="dark">
-                    <Navbar.Brand href="/">Personal Website of Carter Shadden</Navbar.Brand>
+                    <Navbar.Brand href="/">
+                        <i className="fas fa-cloud-moon"></i>
+                    </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="mr-auto">

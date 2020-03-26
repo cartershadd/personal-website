@@ -186,7 +186,7 @@ table td {
 
 /*Allows users to scroll through images on project page*/
 .scrolling {
-    height: 47rem;
+    height: 100%;
     padding: 0.25rem;
     display: grid;
     margin-bottom: 0.2rem;
@@ -197,28 +197,28 @@ table td {
     display: grid;
     grid-gap: 10px;
     grid-column: 2 / -2;
-    grid-template-columns: repeat(11, 40%);
+    grid-template-columns: repeat(12, 40%);
     overflow-x: scroll;
     scroll-snap-type: x proximity;
     padding-bottom: 15px;
-    margin-bottom: -5px;
     overflow-y: hidden;
 }
 
 .scrolling-container > li,
 .scrolling-item {
     scroll-snap-align: center;
-    display: grid;
     flex-direction: column;
     margin: 0.2rem;
-    border-radius: 8px;
     background-color: white;
+    border-radius: 8px;
+    height: 20rem;
 }
 
 .scrolling-img {
     border-radius: 8px;
     height: 100%;
     width: 100%;
+    object-fit: cover
 }
 
 .link-scroll {
@@ -236,9 +236,10 @@ table td {
 }
 
 .popup-image {
-    height: 20rem;
-    width: 20rem;
+    width: 50rem;
     border-radius: 2rem;
+    object-fit: contain;
+    background-color: white;
     margin: 0 auto;
 }
 
